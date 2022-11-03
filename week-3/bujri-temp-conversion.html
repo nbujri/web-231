@@ -1,0 +1,84 @@
+<!--
+==========================================================
+    ; Title: Assignment 3.2
+    ; Author: Ngi Bujri
+    ; Date: 2 November 2022
+    ; Description: App that converts fahrenheit to celsius
+==========================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="./bujri-temp-conversion.css" />
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../site.css" />
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JavaScript -->
+    <script defer src="./bujri-temp-conversion.js"></script>
+
+    <title>WEB 231 - Enterprise JavaScript I</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+      <div class="card-container">
+        <!-- begin card for form -->
+        <div class="card">
+          <div>
+            <p class="card-title">Fahrenheit to Celsius Converter</p>
+          </div>
+          <div class="card-content">
+            <form action="" class="form">
+              <div class="form-field">
+                <label for="txtFahrenheit" class="form-field">
+                  Fahrenheit Value:
+                </label>
+                <input
+                  type="text"
+                  class="input"
+                  id="txtFahrenheit"
+                  name="txtFahrenheit"
+                />
+              </div>
+              <div class="form-field">
+                <button
+                  type="button"
+                  class="btn btn-primary full-width"
+                  id="btnConvert"
+                >
+                  Convert Temperature
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- end card for form -->
+
+        <!-- begin card for results -->
+        <div class="card">
+          <div class="card-title">
+            <p>Conversion Results</p>
+          </div>
+          <div class="card-content">
+            <p id="conversionResults"></p>
+          </div>
+        </div>
+        <!-- end card for results -->
+      </div>
+      <a href="../index.html" class="return-home">Return</a>
+    </div>
+  </body>
+</html>

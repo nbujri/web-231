@@ -1,0 +1,20 @@
+/* 
+==========================================================
+    ; Title: Assignment 3.2
+    ; Author: Ngi Bujri
+    ; Date: 2 November 2022
+    ; Description: App that converts fahrenheit to celsius
+========================================================== 
+*/
+
+h1,
+#conversionResults {
+  text-align: center;
+}
+
+#conversionResults {
+  font-size: 28px;
+}
+.card {
+  margin-bottom: 20px;
+}
