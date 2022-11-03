@@ -5,19 +5,17 @@
 //     ; Description: App that converts fahrenheit to celsius
 // ==========================================================
 
-const btnConvert = document.querySelector("#btnConvert");
-const conversionResults = document.querySelector("#conversionResults");
+document.getElementById("btnConvert").onclick = function () {
+  // get value of txtFahrenheit
+  const fahrenheit = document.getElementById("txtFahrenheit").value;
 
-btnConvert.addEventListener("click", function () {
-  // convert txtFahrenheit string to number
-  const fahrenheit = parseFloat(document.querySelector("#txtFahrenheit").value);
-  // convert to celsius
-  const celsius = ((fahrenheit - 32) / 1.8).toFixed(2);
+  // convert fahrenheit to number and format to two decimal places
+  // parseFloat() used twice because .toFixed returns a string
+  const celsius = parseFloat(((parseFloat(fahrenheit) - 32) / 1.8).toFixed(2));
 
-  // check if input is not NaN
-  if (!isNaN(fahrenheit)) {
-    conversionResults.innerHTML = celsius;
+  if (!isNaN(celsius)) {
+    document.getElementById("conversionResults").innerHTML = celsius;
   } else {
     alert("ENTER A VALID NUMBER!");
   }
-});
+};
