@@ -1,0 +1,100 @@
+<!-- 
+==========================================================
+    ; Title: Assignment 4.2
+    ; Author: Ngi Bujri
+    ; Date: 7 November 2022
+    ; Description: simple number guessing game
+========================================================== 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./bujri-number-game.css" />
+    <link rel="stylesheet" href="../global.css" />
+
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>WEB 231- Enterprise JavaScript I</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="app-header">Welcome to the numbers game!</h1>
+
+      <!-- form for input -->
+      <div class="form-container">
+        <div class="card">
+          <div class="card-title">Pick a number between 1 and 10</div>
+          <div class="card-content">
+            <div class="form">
+              <!-- input field -->
+              <div class="form-field">
+                <label for="txtMyNumber">Guess the number:</label>
+                <input
+                  type="text"
+                  class="form-field input"
+                  id="txtMyNumber"
+                  name="txtMyNumber"
+                />
+              </div>
+
+              <!-- submit button -->
+              <div class="form-field">
+                <button
+                  type="button"
+                  class="btn btn-primary full-width"
+                  id="btnSubmit"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- form to display results -->
+      <div id="form-results">
+        <div class="card">
+          <div class="card-title">Results</div>
+          <div class="card-content" id="display-results"></div>
+        </div>
+
+        <!-- return link -->
+        <a href="../index.html" class="return-home">Return</a>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+      // generate number between 1 and 10
+      const rnd = Math.floor(Math.random() * 10 + 1);
+      const displayResults = document.getElementById("display-results");
+
+      document.getElementById("btnSubmit").onclick = function () {
+        // get value of txtMyNumber and convert to number
+        const myNumber = parseFloat(
+          document.getElementById("txtMyNumber").value
+        );
+
+        // compare myNumber to rnd
+        if (myNumber > rnd) {
+          displayResults.innerHTML = `The number is less than ${myNumber}`;
+        } else if (myNumber < rnd) {
+          displayResults.innerHTML = `The number is greater than ${myNumber}`;
+        } else {
+          displayResults.innerHTML = `Congratulations! You picked the correct number!`;
+        }
+      };
+    </script>
+  </body>
+</html>

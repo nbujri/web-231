@@ -1,0 +1,31 @@
+/* 
+==========================================================
+    ; Title: Assignment 4.2
+    ; Author: Ngi Bujri
+    ; Date: 7 November 2022
+    ; Description: simple number guessing game
+========================================================== 
+*/
+
+body {
+  font-family: Oswald, Verdana, Arial, sans-serif;
+}
+
+.container {
+  padding: 10px;
+}
+
+.form-container,
+#form-results {
+  width: 600px;
+  margin: 3% auto 0;
+}
+
+.app-header,
+#display-results {
+  text-align: center;
+}
+
+#display-results {
+  font-size: 28px;
+}
