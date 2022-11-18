@@ -1,0 +1,33 @@
+/*
+==========================================================
+    ; Title: Assignment 5.2
+    ; Author: Ngi Bujri
+    ; Date: 14 November 2022
+    ; Description: Sequence game demonstrating loops
+==========================================================
+*/
+
+.container {
+  font-family: "Oswald", Verdana, Arial, sans-serif;
+}
+
+/* center text */
+#display-results,
+.app-header {
+  text-align: center;
+}
+
+#display-results {
+  font-size: 28px;
+}
+
+.container {
+  padding: 10px;
+}
+
+/* center divs */
+.form-container,
+.form-results {
+  width: 600px;
+  margin: 3% auto 0;
+}
