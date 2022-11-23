@@ -5,18 +5,6 @@
 //     ; Description: Assignment demonstrating use of objects
 // ==========================================================
 
-// get DOM elements
-const books = document.getElementById("favorite-books");
-const authors = document.getElementById("favorite-authors");
-const btnDisplayListings = document.getElementById("btn-display-listing");
-const dropDown = document.getElementById("favorite-list");
-const booksTable = document.getElementById("books-table");
-const authorsTable = document.getElementById("authors-table");
-
-// set tables display to none
-// books.style.display = "none";
-// authors.style.display = "none";
-
 // objects
 const book1 = {
   isbn: "1506715214",
@@ -51,46 +39,67 @@ const author3 = {
   genre: "Fantasy",
 };
 
-// store books and authors in array
-let bookArr = [book1, book2, book3];
-let authorArr = [author1, author2, author3];
+// get DOM elements
+const books = document.getElementById("favorite-books");
+const authors = document.getElementById("favorite-authors");
+const btnDisplayListings = document.getElementById("btn-display-listing");
+const dropDown = document.getElementById("favorite-list");
+const booksTable = document.getElementById("books-table");
+const authorsTable = document.getElementById("authors-table");
 
-// populate favorite books table
-function populateBookTable() {
-  bookArr.forEach(function (book) {
-    // create row for each book
-    const tr = document.createElement("tr");
-    for (const key in book) {
-      // create table data for each property
-      const td = document.createElement("td");
-      td.textContent = book[key];
+// td elements for books
+const berserkISBN = document.getElementById("berserk-isbn");
+const berserkTitle = document.getElementById("berserk-title");
+const berserkPages = document.getElementById("berserk-pages");
+const witcherISBN = document.getElementById("witcher-isbn");
+const witcherTitle = document.getElementById("witcher-title");
+const witcherPages = document.getElementById("witcher-pages");
+const fellowshipISBN = document.getElementById("fellowship-isbn");
+const fellowshipTitle = document.getElementById("fellowship-title");
+const fellowshipPages = document.getElementById("fellowship-pages");
 
-      tr.appendChild(td);
-    }
-    booksTable.appendChild(tr);
-  });
-}
+// td elements for authors
+const kentaro = document.getElementById("kentaro");
+const kentaroGenre = document.getElementById("kentaro-genre");
+const andrzej = document.getElementById("andrzej");
+const andrzejGenre = document.getElementById("andrzej-genre");
+const jrr = document.getElementById("jrr");
+const jrrGenre = document.getElementById("jrr-genre");
 
-function populateAuthorTable() {
-  authorArr.forEach(function (author) {
-    // create row for each book
-    const tr = document.createElement("tr");
-    for (const key in author) {
-      // create table data for each property
-      const td = document.createElement("td");
-      td.textContent = author[key];
+// set text for tables
+berserkISBN.textContent = book1["isbn"];
+berserkTitle.textContent = book1["title"];
+berserkPages.textContent = book1["pages"];
+witcherISBN.textContent = book2["isbn"];
+witcherTitle.textContent = book2["title"];
+witcherPages.textContent = book2["pages"];
+fellowshipISBN.textContent = book3["isbn"];
+fellowshipTitle.textContent = book3["title"];
+fellowshipPages.textContent = book3["pages"];
 
-      tr.appendChild(td);
-    }
-    authorsTable.appendChild(tr);
-  });
-}
+kentaro.textContent = author1["name"];
+kentaroGenre.textContent = author1["genre"];
+andrzej.textContent = author2["name"];
+andrzejGenre.textContent = author2["genre"];
+jrr.textContent = author3["name"];
+jrrGenre.textContent = author3["genre"];
 
-populateBookTable();
-populateAuthorTable();
+// set tables display to none
+books.style.display = "none";
+authors.style.display = "none";
 
 // events
 btnDisplayListings.onclick = function () {
   const choice = dropDown.value;
-  console.log(choice);
+
+  if (choice === "books") {
+    authors.style.display = "none";
+    books.style.display = "block";
+  } else if (choice === "authors") {
+    books.style.display = "none";
+    authors.style.display = "block";
+  } else {
+    books.style.display = "none";
+    authors.style.display = "none";
+  }
 };
