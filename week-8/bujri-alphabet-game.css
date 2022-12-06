@@ -1,0 +1,18 @@
+/*
+==========================================================
+    ; Title: Assignment 8.2
+    ; Author: Ngi Bujri
+    ; Date: 5 December 2022
+    ; Description: demonstration of arrays
+==========================================================
+*/
+
+.container {
+  font-family: "Oswald", Verdana, Arial, sans-serif;
+}
+
+#alphabet,
+#alphabet-letter {
+  text-align: center;
+  font-size: 28px;
+}
