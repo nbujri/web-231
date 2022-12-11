@@ -47,10 +47,12 @@ for (const letter in alphabet) {
   alphabetOutput += `${alphabet[letter]}, `;
 }
 
+// remove trailing comma and set text
 alphabetsDisplay.textContent = alphabetOutput.toUpperCase().slice(0, -2);
 
 btnFindLetter.onclick = () => {
   const pos = parseInt(txtPosition.value);
+  // subtract 1 to get index
   const letter = alphabet[pos - 1];
 
   if (letter === undefined) {
