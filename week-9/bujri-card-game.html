@@ -24,10 +24,37 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css"
+    />
+
     <!-- JS -->
     <script defer src="./bujri-card-game.js"></script>
 
     <title>WEB 231 - Enterprise JavaScript I</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1 class="app-header">Welcome to the Card Game!</h1>
+
+      <div class="card-dealer">
+        <div class="card-title">Card Dealer</div>
+        <div class="card-content">
+          <button id="btn-deal-cards" class="btn btn-primary full-width">
+            Deal Cards
+          </button>
+        </div>
+      </div>
+
+      <a href="../index.html" class="return-home">Return</a>
+
+      <div class="card-container">
+        <div class="card-title">Shuffled Cards</div>
+        <div class="card-content">
+          <div id="player-card-container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

@@ -6,3 +6,18 @@
     ; Description: demonstrate JS functions by building a card game
 ====================================================================
 */
+
+.container {
+  font-family: "Oswald", Verdana, Arial, sans-serif;
+}
+
+.player-card {
+  text-align: center;
+}
+
+#player-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  gap: 10px;
+}
