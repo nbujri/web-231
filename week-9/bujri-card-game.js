@@ -43,7 +43,7 @@ class Dealer {
       // get random card that will swap with tempCard
       let secondCard = Math.floor(Math.random() * this.cardCount);
       let tempCard = this.cards[firstCard];
-      let currentCard = secondCard;
+      this.cards[firstCard] = this.cards[secondCard];
       secondCard = tempCard;
     }
   }
