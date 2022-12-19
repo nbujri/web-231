@@ -114,6 +114,7 @@ document.getElementById("btn-deal-cards").onclick = function () {
     }
   }
 
+  // set HTML of player-card-container to display cards
   document.getElementById("player-card-container").innerHTML =
     cardOutputWithIcon;
 };

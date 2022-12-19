@@ -11,13 +11,22 @@
   font-family: "Oswald", Verdana, Arial, sans-serif;
 }
 
-.player-card {
+/* center header */
+.app-header {
   text-align: center;
 }
 
+/* center card container */
+.card-content {
+  display: flex;
+  justify-content: center;
+}
+
+/* display cards in a grid */
 #player-card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(13, 100px);
   padding: 10px;
   gap: 10px;
 }
